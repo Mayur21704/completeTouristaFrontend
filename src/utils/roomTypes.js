@@ -29,6 +29,8 @@ export const roomTypes = [
     images: [
       "https://images.unsplash.com/photo-1605346434674-a440ca4dc4c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D",
       "https://images.unsplash.com/photo-1598928636135-d146006ff4be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJlZHJvb218ZW58MHx8MHx8fDA%3D",
+      "https://plus.unsplash.com/premium_photo-1661962493427-910e3333cf5a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg1fHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjMyfHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
     ],
     cancellationPolicy: "Free cancellation within 24 hours.",
     amenities: [
@@ -106,6 +108,7 @@ export const roomTypes = [
     description:
       "Spacious, luxurious room with stunning ocean views and a private balcony.",
     images: [
+      "https://images.unsplash.com/photo-1557127275-f8b5ba93e24e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUyfHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1661964402307-02267d1423f5?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
       "https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?w=600&auto=format&fit=crop&q=60&ixib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWwlMjByb29tfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1631049552057-403cdb8f0658?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdGVsJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D",
@@ -188,7 +191,7 @@ export const roomTypes = [
     description:
       "Luxurious suite with private jacuzzi and stunning views of the ocean.",
     images: [
-      "https://images.unsplash.com/photo-1601758123152-5fdc0c827bda?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1587874522487-fe10e954d035?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE4fHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
       "https://images.unsplash.com/photo-1562226243-285c9c57435f?w=600&auto=format&fit=crop&q=60",
       "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdGVsfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1521783988139-89397d761dce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGhvdGVsfGVufDB8fDB8fHww",
@@ -273,9 +276,11 @@ export const roomTypes = [
     description:
       "A luxurious suite with private jacuzzi and unparalleled mountain views.",
     images: [
-      "https://images.unsplash.com/photo-1565574921-53162137077a?w=600&auto=format&fit=crop&q=60",
+      "https://plus.unsplash.com/premium_photo-1661964225206-fd5d445a6edd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjV8fGhvdGVsfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1561501878-aabd62634533?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTR8fGhvdGVsfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGhvdGVsfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1586611292717-f828b167408c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGhvdGVsfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1561501900-3701fa6a0864?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
     ],
     cancellationPolicy: "Free cancellation within 72 hours.",
     amenities: [

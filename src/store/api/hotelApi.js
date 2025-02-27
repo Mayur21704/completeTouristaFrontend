@@ -29,6 +29,8 @@ const hotelApi = flightApi.injectEndpoints({
             "https://images.unsplash.com/photo-1578774204375-826dc5d996ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fGhvdGVsfGVufDB8fDB8fHww",
             "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTB8fGhvdGVsfGVufDB8fDB8fHww",
             "https://images.unsplash.com/photo-1614568112072-770f89361490?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAwfHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1541435469116-8ce8ccc4ff85?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM2fHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1568652623543-c42c25821193?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjEwfHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
           ];
 
           // Shuffle the images in the hotelImages array randomly
