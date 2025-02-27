@@ -1,5 +1,3 @@
-
-
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -14,8 +12,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useCreatePaymentMutation } from "../store/api/paymentApi";
-import { resetPassengerSeats } from "../store/passengerReducer";
+import { useCreatePaymentMutation } from "../../store/api/paymentApi";
+import { resetPassengerSeats } from "../../store/passengerReducer";
 
 const BookingSummary = () => {
   const navigate = useNavigate();

@@ -18,7 +18,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {
   resetPassengerSeats,
   setSelectedSeat,
-} from "../store/passengerReducer";
+} from "../../store/passengerReducer";
 
 const SeatBooking = () => {
   // ... (keeping all the existing state and hooks)

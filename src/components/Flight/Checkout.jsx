@@ -11,8 +11,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useCreateBookingMutation } from "../store/api/bookingApi";
-import { setBooking } from "../store/flightBookingSlice";
+import { useCreateBookingMutation } from "../../store/api/bookingApi";
+import { setBooking } from "../../store/flightBookingSlice";
 
 const stripePromise = loadStripe(
   "pk_test_51PP05QDaG0pF684dTp3Ow6opjd8xrx0oDDo9F5HX4hkTPJc95Obwn4u7IwWU3oGMSlQKIRq4Ke0iUzGhFuahcAO5002I2Ga6et"

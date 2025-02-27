@@ -24,13 +24,15 @@ const Home = lazy(() => import("./components/Home"));
 const Search = lazy(() => import("./components/Flight/Search"));
 const FlightResult = lazy(() => import("./components/Flight/FlightResult"));
 const FlightDetails = lazy(() => import("./components/Flight/FlightDetails"));
-const SeatBooking = lazy(() => import("./components/SeatBooking"));
+const SeatBooking = lazy(() => import("./components/Flight/seatBooking"));
 const PassengerInfo = lazy(() => import("./components/Flight/PassengerInfo"));
-const ReturnSeatBooking = lazy(() => import("./components/ReturnSeatBooking"));
-const BookingSummary = lazy(() => import("./components/BookingSummary"));
+const ReturnSeatBooking = lazy(() =>
+  import("./components/Flight/ReturnSeatBooking")
+);
+const BookingSummary = lazy(() => import("./components/Flight/BookingSummary"));
 const CanceledPage = lazy(() => import("./components/CanceledPage"));
-const Checkout = lazy(() => import("./components/Checkout"));
-const PaymentSuccess = lazy(() => import("./components/PaymentSuccess"));
+const Checkout = lazy(() => import("./components/Flight/Checkout"));
+const PaymentSuccess = lazy(() => import("./components/Flight/PaymentSuccess"));
 const Profile = lazy(() => import("./components/Profile"));
 
 const App = () => {

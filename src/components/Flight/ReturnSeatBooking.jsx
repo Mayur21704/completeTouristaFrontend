@@ -18,7 +18,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {
   resetPassengerSeats,
   setSelectedSeat,
-} from "../store/passengerReducer";
+} from "../../store/passengerReducer";
 
 const ReturnSeatBooking = () => {
   const { id, passengerId } = useParams();
