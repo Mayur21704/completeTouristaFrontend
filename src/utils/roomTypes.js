@@ -273,7 +273,6 @@ export const roomTypes = [
     description:
       "A luxurious suite with private jacuzzi and unparalleled mountain views.",
     images: [
-      "https://images.unsplash.com/photo-1552957061-d5517fa0ff4f?w=600&auto=format&fit=crop&q=60",
       "https://images.unsplash.com/photo-1565574921-53162137077a?w=600&auto=format&fit=crop&q=60",
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGhvdGVsfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1586611292717-f828b167408c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGhvdGVsfGVufDB8fDB8fHww",
