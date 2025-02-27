@@ -3,7 +3,7 @@ import { airlines } from "../../utils/airline"; // Assuming this is a list of av
 const flightApi = createApi({
   reducerPath: "flightSlice",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4000/api/v1",
+    baseUrl: "https://completouristabackend.onrender.com/api/v1",
     prepareHeaders: (headers, { getState }) => {
       const token = localStorage.getItem("token"); // Get the token from localStorage
       if (token) {
