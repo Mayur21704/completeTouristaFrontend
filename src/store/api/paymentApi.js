@@ -1,0 +1,21 @@
+import flightApi from "./flightApi";
+
+export const paymentApi = flightApi.injectEndpoints({
+  reducerPath: "paymentApi",
+  endpoints: (builder) => ({
+    createPayment: builder.mutation({
+      query: (bookingData) => {
+        // Retrieve token from localStorage (or Redux store if you're using Redux)
+        console.log(bookingData);
+
+        return {
+          url: "/payment/create", // Ensure this matches your backend route
+          method: "POST",
+          body: bookingData, // Send the booking data (selected flight details, priceId, email, etc.)
+        };
+      },
+    }),
+  }),
+});
+
+export const { useCreatePaymentMutation } = paymentApi;
