@@ -22,7 +22,7 @@ const Admin = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const statsRef = useRef(null);
   const contentRef = useRef(null);
-  const { data, isLoading, isError, error } = useGetOveralTotalQuery();
+  const { data, isLoading } = useGetOveralTotalQuery();
 
   // Handle animations when tab changes
   useEffect(() => {
