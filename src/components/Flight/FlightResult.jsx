@@ -35,6 +35,7 @@ const FlightResult = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isFilterChanging, setIsFilterChanging] = useState(false);
+  const [selectedAirline, setSelectedAirline] = useState("");
 
   const handleMoreDetailsClick = (flight) => {
     dispatch(setSelectedFlight(flight));
@@ -127,16 +128,12 @@ const FlightResult = () => {
   const handleFilterChange = (e) => {
     const { name, value, type, checked } = e.target;
 
-    // Set loading state immediately when filter changes
-    setIsLoading(true);
-
-    if (type === "checkbox") {
-      if (checked) {
-        dispatch(setFilters({ [name]: value }));
-      } else {
-        dispatch(setFilters({ [name]: "" }));
-      }
+    if (name === "airline") {
+      setSelectedAirline(checked ? value : "");
     } else {
+      // Set loading state immediately when filter changes
+      setIsLoading(true);
+
       dispatch(setFilters({ [name]: value }));
     }
   };
@@ -149,12 +146,14 @@ const FlightResult = () => {
   const filteredAndSortedFlights = useMemo(() => {
     let result = [...flights];
 
-    if (filters.airline) {
+    // Apply airline filter if selected
+    if (selectedAirline) {
       result = result.filter(
-        (flight) => flight.airlineName === filters.airline
+        (flight) => flight.airlineName === selectedAirline
       );
     }
 
+    // Apply price sorting
     result.sort((a, b) => {
       const priceA = parseFloat(a.price?.total);
       const priceB = parseFloat(b.price?.total);
@@ -162,7 +161,7 @@ const FlightResult = () => {
     });
 
     return result;
-  }, [flights, filters.airline, sortOrder]);
+  }, [flights, selectedAirline, sortOrder]);
 
   const airlines =
     flights.length > 0
@@ -387,7 +386,7 @@ const FlightResult = () => {
                           onChange={handleFilterChange}
                           name="airline"
                           value={airline}
-                          checked={filters.airline === airline}
+                          checked={selectedAirline === airline}
                         />
                         <span className="ml-3 text-sm text-gray-600 group-hover:text-blue-500 transition-colors duration-200">
                           {airline}
