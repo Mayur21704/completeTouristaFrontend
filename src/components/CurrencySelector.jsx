@@ -44,7 +44,7 @@ const CurrencySelector = () => {
   });
 
   return (
-    <div className="currency-selector fixed top-4 right-4 z-50">
+    <div className="currency-selector fixed top-24 right-4 z-50">
       {/* Display selected currency or a button */}
       <button
         onClick={() => setIsModalOpen(true)}
