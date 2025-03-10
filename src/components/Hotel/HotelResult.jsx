@@ -774,10 +774,10 @@ const HotelResult = () => {
             transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1 }}
             className="text-4xl mb-4"
           >
-            ⚠️
+            🏨
           </motion.div>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">
-            Oops! Something went wrong
+            No Hotels Found
           </h2>
           <p className="text-gray-600 mb-6">
             We couldn't load the hotels. Please try again.
