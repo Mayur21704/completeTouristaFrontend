@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import {
@@ -13,9 +11,9 @@ import {
   MapPin,
   Star,
   Users,
-  Utensils
+  Utensils,
 } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -24,6 +22,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
+import axios from "axios";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -34,7 +33,41 @@ const HotelPaymentSuccess = () => {
   const bookingData = useSelector(
     (state) => state.hotelbooking.hotelbookingData
   );
+  const { numberOfNights } = useSelector((state) => state.hotel.filters);
   const successRef = useRef();
+
+  // State to store the city and country
+  const [location, setLocation] = useState({ city: "", country: "" });
+
+  useEffect(() => {
+    const fetchLocationInfo = async () => {
+      const lat = bookingData.selectedRoomWithHotel.hotel.geoCode?.latitude;
+      const lon = bookingData.selectedRoomWithHotel.hotel.geoCode?.longitude;
+
+      try {
+        const response = await axios.get(
+          `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=b1848a3076274113bdfc659c3e0731bb`
+        );
+        const locationData = response.data.results[0]; // Assuming the first result is the best one
+
+        const city =
+          locationData.components.state_district ||
+          locationData.components.city ||
+          locationData.components.town ||
+          locationData.components.village;
+        const country = locationData.components.country;
+
+        // Update the state with the city and country
+        setLocation({ city, country });
+      } catch (error) {
+        console.error("Error fetching location info", error);
+      }
+    };
+
+    if (bookingData.selectedRoomWithHotel.hotel.geoCode) {
+      fetchLocationInfo();
+    }
+  }, [bookingData]);
 
   useEffect(() => {
     // Show success toast
@@ -105,7 +138,10 @@ const HotelPaymentSuccess = () => {
                 </h2>
                 <div className="flex items-center mt-2">
                   <MapPin className="w-5 h-5 text-gray-500 mr-2" />
-                  <span className="text-gray-600">New Delhi, India</span>
+                  {/* Use city and country from API */}
+                  <span className="text-gray-600">
+                    {location.city}, {location.country}
+                  </span>
                   <div className="ml-4 flex items-center">
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="ml-1">{hotel.reviews.totalRatings}</span>
@@ -236,12 +272,13 @@ const HotelPaymentSuccess = () => {
                 </h4>
                 <div className="space-y-2">
                   <div className="flex justify-between text-green-700">
-                    <span>Room Charges</span>
-                    <span>₹{offer.price.discounted}</span>
+                    <span>Room Charges({numberOfNights} Nights)</span>
+                    <span>₹{offer.price.discounted * numberOfNights}</span>
                   </div>
                   <div className="flex justify-between text-green-700">
                     <span>Taxes & Fees</span>
-                    <span>₹{offer.price.taxesAndFees}</span>
+                    <span>₹{offer.price.taxesAndFees * numberOfNights}</span>
+                    {/* selectedRoom?.offer?.price?.taxesAndFees * numberOfNights */}
                   </div>
                   <div className="flex justify-between font-bold text-green-800 pt-2 border-t border-green-200">
                     <span>Total Paid</span>

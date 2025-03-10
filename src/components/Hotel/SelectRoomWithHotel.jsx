@@ -214,44 +214,6 @@ const GuestDetails = () => {
             </p>
           </motion.div>
 
-          {/* Booking Progress */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-2xl mx-auto mb-12"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
-                  <Users size={20} />
-                </div>
-                <span className="text-sm font-medium mt-2 text-blue-600">
-                  Guest Details
-                </span>
-              </div>
-              <div className="flex-1 h-1 mx-4 bg-gray-200">
-                <div className="w-0 h-full bg-blue-600"></div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-400">
-                  <CreditCard size={20} />
-                </div>
-                <span className="text-sm font-medium mt-2 text-gray-400">
-                  Payment
-                </span>
-              </div>
-              <div className="flex-1 h-1 mx-4 bg-gray-200"></div>
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-400">
-                  <Check size={20} />
-                </div>
-                <span className="text-sm font-medium mt-2 text-gray-400">
-                  Confirmation
-                </span>
-              </div>
-            </div>
-          </motion.div> */}
-
           {/* Mobile Summary Toggle */}
           <motion.div
             className="lg:hidden mb-8 bg-white rounded-2xl shadow-lg overflow-hidden"
