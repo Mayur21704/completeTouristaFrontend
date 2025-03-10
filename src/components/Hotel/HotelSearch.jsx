@@ -74,6 +74,10 @@ const HotelSearch = () => {
   // Handle location change
   const handleChange = (e) => {
     const { name, value } = e.target;
+    // Prevent numbers in origin and destination fields
+    if ((name === "location" ) && /\d/.test(value)) {
+      return;
+    }
 
     const updatedParams = { ...params, [name]: value };
     setParamsState(updatedParams);

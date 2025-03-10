@@ -478,8 +478,6 @@
 
 // export default HotelResult;
 
-
-
 import {
   setHotelData,
   setSelectedHotelFromRedux,
@@ -773,9 +771,6 @@ const HotelResult = () => {
           className="bg-white p-6 md:p-8 rounded-2xl shadow-lg max-w-md w-full text-center"
         >
           <motion.div
-            animate={{
-              rotate: [0, 10, -10, 0],
-            }}
             transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1 }}
             className="text-4xl mb-4"
           >
@@ -790,10 +785,10 @@ const HotelResult = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => getHotels(location)}
+            onClick={() => navigate("/hotelSearch")}
             className="px-6 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
           >
-            Try Again
+            Modify Search
           </motion.button>
         </motion.div>
       </motion.div>
