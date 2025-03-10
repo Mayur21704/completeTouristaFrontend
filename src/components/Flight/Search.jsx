@@ -477,7 +477,7 @@ const Search = () => {
                   })
                 }
               >
-                Round Trip
+                Round Way
               </motion.div>
             </motion.div>
 

@@ -362,7 +362,6 @@ const FlightResult = () => {
                     onChange={handleFilterChange}
                     className="w-full p-3 border border-gray-300 rounded-xl bg-white hover:border-blue-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
-                    <option value="">All Classes</option>
                     <option value="BUSINESS">Business</option>
                     <option value="ECONOMY">Economy</option>
                     <option value="FIRST">First</option>
