@@ -111,7 +111,7 @@ function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 hero-image">
           <img
-            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHRyYXZlbCUyMGJvb2tpbmd8ZW58MHx8MHx8fDA%3D"
             alt="Travel landscape"
             className="w-full h-full object-cover"
           />
