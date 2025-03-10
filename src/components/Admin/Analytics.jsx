@@ -116,10 +116,6 @@ const Analytics = () => {
               <Plane className="w-6 h-6 text-green-400" />
             </div>
           </div>
-          <div className="flex items-center text-green-400">
-            <TrendingUp className="w-4 h-4 mr-1" />
-            {/* <span>+{dashboardData.flightBookingsPercentage}% growth</span> */}
-          </div>
         </motion.div>
 
         <motion.div
@@ -138,10 +134,6 @@ const Analytics = () => {
             <div className="p-3 bg-purple-500/20 rounded-lg">
               <Hotel className="w-6 h-6 text-purple-400" />
             </div>
-          </div>
-          <div className="flex items-center text-green-400">
-            <TrendingUp className="w-4 h-4 mr-1" />
-            {/* <span>+{dashboardData.hotelBookingsPercentage}% growth</span> */}
           </div>
         </motion.div>
 
