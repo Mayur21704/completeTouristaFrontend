@@ -75,7 +75,7 @@ const HotelSearch = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     // Prevent numbers in origin and destination fields
-    if ((name === "location" ) && /\d/.test(value)) {
+    if (name === "location" && /\d/.test(value)) {
       return;
     }
 
@@ -151,7 +151,7 @@ const HotelSearch = () => {
           <div className="space-y-8">
             {/* Destination */}
             <motion.div className="relative">
-              <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+              <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 Location
               </label>
@@ -209,7 +209,7 @@ const HotelSearch = () => {
             {/* Dates and Passengers */}
             <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   Check-in Date
                 </label>
@@ -230,7 +230,7 @@ const HotelSearch = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   Check-out Date
                 </label>
@@ -261,7 +261,7 @@ const HotelSearch = () => {
             {/* Passengers */}
             <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   Adults
                 </label>
                 <input
@@ -275,7 +275,7 @@ const HotelSearch = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   Children{" "}
                   <span className="text-sm text-gray-500">(2-12 years)</span>
                 </label>

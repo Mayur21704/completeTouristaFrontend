@@ -333,7 +333,7 @@ const Search = () => {
               variants={itemVariants}
             >
               <div className="relative">
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   <Plane className="w-4 h-4" />
                   Origin
                 </label>
@@ -388,7 +388,7 @@ const Search = () => {
               </div>
 
               <div className="relative">
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   <Plane className="w-4 h-4 transform rotate-90" />
                   Destination
                 </label>
@@ -486,7 +486,7 @@ const Search = () => {
               variants={itemVariants}
             >
               <div>
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   Departure Date
                 </label>
@@ -516,7 +516,7 @@ const Search = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                 >
-                  <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                  <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
                     Return Date
                   </label>
@@ -548,7 +548,7 @@ const Search = () => {
               variants={itemVariants}
             >
               <div>
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   <Users className="w-4 h-4" />
                   Adults
                 </label>
@@ -563,7 +563,7 @@ const Search = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-2 flex items-center gap-2">
+                <label className=" text-gray-700 font-medium mb-2 flex items-center gap-2">
                   <Users className="w-4 h-4" />
                   Children{" "}
                   <span className="text-sm text-gray-500">(2-12 years)</span>

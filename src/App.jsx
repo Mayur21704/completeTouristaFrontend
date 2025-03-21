@@ -1,20 +1,29 @@
 import { lazy, Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar"; // Import the Navbar component
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Make sure to import the CSS
-import About from "./components/About";
-import Admin from "./components/Admin/Admin";
-import CheckoutPageHotel from "./components/Hotel/CheckoutPageHotel";
-import HotelDetail from "./components/Hotel/HotelDetail";
-import HotelPaymentSuccess from "./components/Hotel/HotelPaymentSuccess";
-import HotelResult from "./components/Hotel/HotelResult";
-import HotelSearch from "./components/Hotel/HotelSearch";
-import SelectRoomWithHotel from "./components/Hotel/SelectRoomWithHotel";
+
+import Navbar from "./components/Navbar"; // Import the Navbar component
 import Loader from "./components/Loader";
-import ProtectedRoute from "./components/ProtectedRoute"; // Import the ProtectedRoute
-import ResetPassword from "./components/ResetPassword";
+
+const About = lazy(() => import("./components/About"));
+const Admin = lazy(() => import("./components/Admin/Admin"));
+const CheckoutPageHotel = lazy(() =>
+  import("./components/Hotel/CheckoutPageHotel")
+);
+const HotelDetail = lazy(() => import("./components/Hotel/HotelDetail"));
+const HotelPaymentSuccess = lazy(() =>
+  import("./components/Hotel/HotelPaymentSuccess")
+);
+const HotelResult = lazy(() => import("./components/Hotel/HotelResult"));
+const HotelSearch = lazy(() => import("./components/Hotel/HotelSearch"));
+const SelectRoomWithHotel = lazy(() =>
+  import("./components/Hotel/SelectRoomWithHotel")
+);
+
+const ProtectedRoute = lazy(() => import("./components/ProtectedRoute"));
+const ResetPassword = lazy(() => import("./components/ResetPassword"));
 
 const Register = lazy(() => import("./components/Register"));
 const SignIn = lazy(() => import("./components/SignIn"));

@@ -5,9 +5,6 @@ export const paymentApi = flightApi.injectEndpoints({
   endpoints: (builder) => ({
     createPayment: builder.mutation({
       query: (bookingData) => {
-        // Retrieve token from localStorage (or Redux store if you're using Redux)
-        console.log(bookingData);
-
         return {
           url: "/payment/create", // Ensure this matches your backend route
           method: "POST",

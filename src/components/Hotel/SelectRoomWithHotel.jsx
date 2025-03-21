@@ -162,7 +162,6 @@ const GuestDetails = () => {
         email: formData.get("email"),
       })
     );
-    console.log(selectedRoom.offer.price);
     try {
       const response = await createPayment(selectedRoom.offer.price).unwrap();
       navigate(`/checkouthotel`, {

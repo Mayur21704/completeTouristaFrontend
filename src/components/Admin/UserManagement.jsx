@@ -1,9 +1,8 @@
 import { useGetUsersQuery } from "@/src/store/api/adminApi";
-import { Mail, MoreVertical, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const UserManagement = () => {
   const { data, isLoading } = useGetUsersQuery();
-  // console.log(data);
   const userss = data?.users;
 
   if (isLoading) {

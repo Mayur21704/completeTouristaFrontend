@@ -19,7 +19,6 @@ const SignIn = () => {
 
   // Get the "from" location (the page user wanted to visit)
   const redirectTo = location.state?.from?.pathname || "/"; // Default to homepage if no redirect
-  console.log(redirectTo);
 
   // Handle email/password sign-in
   const handleEmailSignIn = async (e) => {

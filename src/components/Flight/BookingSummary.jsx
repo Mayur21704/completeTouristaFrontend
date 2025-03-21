@@ -18,7 +18,6 @@ import { resetPassengerSeats } from "../../store/passengerReducer";
 const BookingSummary = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
   const [createPayment] = useCreatePaymentMutation();
 
   const [passengerData, setPassengerData] = useState({
@@ -126,15 +125,6 @@ const BookingSummary = () => {
       opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.4 },
     },
   };
 

@@ -5,9 +5,6 @@ const hotelbookingApi = flightApi.injectEndpoints({
   endpoints: (builder) => ({
     createHotelBooking: builder.mutation({
       query: (bookingData) => {
-        // Retrieve token from localStorage (or Redux store if you're storing it there)
-        console.log(bookingData);
-
         return {
           url: "/bookinghotel/createhotel", // Ensure this matches your backend route
           method: "POST",

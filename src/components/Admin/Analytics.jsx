@@ -61,7 +61,6 @@ const prepareMonthlyBookingsData = (data) => {
 const Analytics = () => {
   // Use the actual data from the API response
   const { data, isLoading } = useGetUsersAnalyticsQuery();
-  console.log(data);
 
   if (isLoading) {
     return <div>Loading</div>;
@@ -300,86 +299,6 @@ const Analytics = () => {
             </BarChart>
           </ResponsiveContainer>
         </motion.div>
-
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-gray-800 p-6 rounded-xl shadow-xl"
-        >
-          <h3 className="text-xl font-bold text-white mb-6">
-            Top Destinations
-          </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              {data.topDestinations.map((destination, index) => (
-                <motion.div
-                  key={destination.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-gray-700/50 p-4 rounded-lg hover:bg-gray-700/70 transition-colors"
-                >
-                  <div className="flex justify-between items-center mb-2">
-                    <h4 className="text-white font-medium">
-                      {destination.name}
-                    </h4>
-                    <span className="text-green-400">
-                      +{destination.growth}%
-                    </span>
-                  </div>
-                  <div className="flex justify-between text-sm text-gray-400">
-                    <span>{destination.bookings} bookings</span>
-                    <span>₹{destination.revenue.toLocaleString()} revenue</span>
-                  </div>
-                  <div className="mt-2 bg-gray-600 h-2 rounded-full overflow-hidden">
-                    <div
-                      className="bg-blue-500 h-2 rounded-full"
-                      style={{
-                        width: `${Math.min(
-                          (destination.bookings / 5) * 100,
-                          100
-                        )}%`,
-                      }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart
-                data={data.topDestinations}
-                layout="vertical"
-                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                <XAxis type="number" stroke="#9CA3AF" />
-                <YAxis
-                  dataKey="name"
-                  type="category"
-                  stroke="#9CA3AF"
-                  width={80}
-                />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "#1F2937",
-                    border: "none",
-                    borderRadius: "8px",
-                  }}
-                  itemStyle={{ color: "#fff" }}
-                  formatter={(value) => [`${value}`, ""]}
-                />
-                <Legend />
-                <Bar
-                  dataKey="bookings"
-                  name="Bookings"
-                  fill="#3B82F6"
-                  radius={[0, 4, 4, 0]}
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </motion.div> */}
       </div>
     </div>
   );

@@ -16,7 +16,6 @@ const ForgotPassword = () => {
     try {
       // Call the forgot password mutation
       const response = await forgotPassword({ email }).unwrap(); // unwrap() gets the result directly
-      console.log(response);
 
       toast.success(response.message || "Password reset link sent!");
 

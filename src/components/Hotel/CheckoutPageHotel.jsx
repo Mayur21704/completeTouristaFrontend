@@ -55,7 +55,6 @@ const CheckoutHotel = () => {
       setIsProcessing(false);
       setPaymentError(error.message);
     } else if (paymentIntent.status === "succeeded") {
-      console.log("payment done");
 
       const bookingData = {
         selectedRoomWithHotel: selectedRoomWithHotel,
@@ -66,7 +65,6 @@ const CheckoutHotel = () => {
       try {
         const response = await createHotelBooking(bookingData).unwrap();
         toast.success("Payment successful! Your booking is confirmed.");
-        console.log(response.bookingData);
         dispatch(setBooking(response.bookingData));
 
         setIsProcessing(false);
